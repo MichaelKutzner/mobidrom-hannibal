@@ -10,13 +10,15 @@ Der Projektname verweist auf den karthagischen Feldherr Hannibal, der mit Elefan
 <img src="https://github.com/Mobidrom/Projekt-Hannibal/assets/30908795/3e0e05fd-9ec0-403f-8a03-a6af84364d4d" width="500"/>
 </p>
 
-### Installation
+### Requirements
 
-Benötigt werden:
-
-- Python >= 3.10
-- Poetry
+- Python >= 3.14
+- Poetry  
+    **Wichtig**: Dies darf nicht in der selben Umgebung wie das Projekt installiert werden, wie in der [Dokumentation](https://python-poetry.org/docs/#installing-manually) beschrieben
+- `libgdal-dev` Required to build package `fiona`
 - Osmium Tool um OSM Dateien zusammenzuführen
+
+### Installation
 
 ```bash
 git clone git@github.com:Mobidrom/Projekt-Hannibal.git
@@ -110,3 +112,15 @@ Dies geschieht unter anderem mithilfe von kleinen ASCII-"Karten" (inspiriert dur
 
 Foto von © José Luiz Bernardes Ribeiro, CC BY-SA 4.0  
 https://commons.wikimedia.org/w/index.php?curid=53809379
+
+### Troubleshooting
+
+#### `poetry install` due to outdated `poetry.lock`
+
+Update `poetry.lock` by running `poetry lock`
+
+#### Versionsupdate
+
+* TODO
+* Datei `poetry.lock` löschen und über `poetry lock` neu erstellen
+
