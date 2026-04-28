@@ -1,9 +1,8 @@
 from abc import ABC, ABCMeta, abstractmethod
 from collections import defaultdict
 from pathlib import Path
-from typing import Any, Dict, Generator, Generic, List, Tuple
+from typing import Any, Dict, Generator, Generic, List, Tuple, TypeVar
 
-from osmium import TypeVar
 from shapely import LineString
 
 from hannibal.io.shapefile import load_shp

@@ -1,4 +1,5 @@
-from osmium import Area, SimpleHandler
+from osmium import SimpleHandler
+from osmium.osm import Area
 from osmium.geom import WKBFactory
 from shapely import Polygon, wkb
 
