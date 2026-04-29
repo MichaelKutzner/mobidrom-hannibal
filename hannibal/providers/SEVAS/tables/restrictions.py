@@ -36,7 +36,7 @@ class SEVASGroupedDays(str, Enum):
 KEY_FROM_TYPE = {
     SEVASRestrType.BICYCLE_ROAD: "bicycle_road",  # TODO
     SEVASRestrType.VEHICLE_NO: "vehicle",  # TODO
-    SEVASRestrType.MOTORCAR_NO : "motorcar",  # TODO
+    SEVASRestrType.MOTORCAR_NO: "motorcar",  # TODO
     SEVASRestrType.HGV_NO: "hgv",
     SEVASRestrType.MOTORCAR_MOTORCYCLE_NO: "motor_vehicle",  # TODO
     SEVASRestrType.WEIGHT: "maxweight",

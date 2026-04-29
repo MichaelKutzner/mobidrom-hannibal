@@ -1,6 +1,6 @@
 from osmium import SimpleHandler
-from osmium.osm import Area
 from osmium.geom import WKBFactory
+from osmium.osm import Area
 from shapely import Polygon, wkb
 
 from hannibal.logging import LOGGER

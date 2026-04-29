@@ -162,7 +162,7 @@ class CommonRestrSignatures(str, Enum):
 PERMISSIVE_VALUES = {
     SEVASRestrType.BICYCLE_ROAD: "yes",  # TODO
     SEVASRestrType.VEHICLE_NO: "yes",  # TODO
-    SEVASRestrType.MOTORCAR_NO : "yes",  # TODO
+    SEVASRestrType.MOTORCAR_NO: "yes",  # TODO
     SEVASRestrType.HGV_NO: "yes",
     SEVASRestrType.HGV_TRAILER: "yes",
     SEVASRestrType.MOTORCAR_MOTORCYCLE_NO: "yes",  # TODO
