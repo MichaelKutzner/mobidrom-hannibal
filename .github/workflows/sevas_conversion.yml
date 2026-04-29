@@ -6,7 +6,7 @@ on:
       osm_url:
         description: "URL zu einer OSM PBF Datei, z. B. http://download.geofabrik.de/europe/germany/nordrhein-westfalen-latest.osm.pbf"
         required: true
-        default: "http://download.geofabrik.de/europe/germany/nordrhein-westfalen-latest.osm.pbf"
+        default: "https://download.geofabrik.de/europe/germany/nordrhein-westfalen-latest.osm.pbf"
       sevas_url:
         description: "URL zum SEVAS WFS Client"
         required: true
@@ -34,8 +34,8 @@ jobs:
         id: obtain_checksum
         run: |
           CHECKSUM_URL=${{ inputs.osm_url }}.md5
-          if [[ $(curl -fs $CHECKSUM_URL) ]]; then
-            echo "checksum=$(curl -s $CHECKSUM_URL | awk '{print $1"-"$2}')" >> $GITHUB_OUTPUT
+          if data="$(curl -fsL $CHECKSUM_URL)"; then
+            echo "checksum=$(echo "${data}" | awk '{print $1"-"$2}')" >> $GITHUB_OUTPUT
           fi
 
       - uses: actions/cache@v3
@@ -74,7 +74,7 @@ jobs:
         run: |
           mkdir ~/.osm_source
           echo ${{ inputs.osm_url }}
-          curl -sfo ~/.osm_source/source.pbf ${{ inputs.osm_url }}
+          curl -sfLo ~/.osm_source/source.pbf ${{ inputs.osm_url }}
 
       - name: SEVAS Konversion
         run: |
